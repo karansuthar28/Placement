@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+  public:
+    void rotate(vector<int> &arr) {
+        // code here
+        if(arr.size() == 1) return;
+        
+        int temp = arr[arr.size()-1];
+        
+        for(int i = arr.size()-1; i >= 1; i--)
+            arr[i] = arr[i-1];
+            
+        arr[0] = temp;
+    }
+};
