@@ -25,3 +25,29 @@ public:
         return arr[low];
     }
 };
+
+// Alternate Solution 
+class Solution {
+public:
+    int findMin(vector<int>& arr) {
+        int low = 0, high = arr.size()-1, minElement = arr[0];
+
+        while(low <= high)
+        {
+            int mid = (high-low)/2 + low;
+
+            // Left Part
+            if(arr[mid] >= arr[0]) {
+                low = mid+1;
+            }
+
+            // Right Part
+            else {
+                minElement = arr[mid];
+                high = mid-1;
+            }
+        }
+
+        return minElement;
+    }
+};
