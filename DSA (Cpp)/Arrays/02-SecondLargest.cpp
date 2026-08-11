@@ -9,15 +9,14 @@ class Solution {
         
         for(int i = 1; i < arr.size(); i++)
         {
-            if(arr[i] > max)
-            {
+            if(arr[i] > max) {
                 secondMax = max;
                 max = arr[i];
             }
             
-            if(arr[i] < max && arr[i] > secondMax) secondMax = arr[i];
+            else if(arr[i] > secondMax && arr[i] != max) secondMax = arr[i];
         }
-            
+        
         return secondMax;
     }
 };

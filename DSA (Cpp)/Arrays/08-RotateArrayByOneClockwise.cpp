@@ -5,13 +5,12 @@ class Solution {
   public:
     void rotate(vector<int> &arr) {
         // code here
-        if(arr.size() == 1) return;
+        int n = arr.size(), temp = arr[n-1];
         
-        int temp = arr[arr.size()-1];
-        
-        for(int i = arr.size()-1; i >= 1; i--)
+        for(int i = n-1; i > 0; i--) {
             arr[i] = arr[i-1];
-            
+        }
+        
         arr[0] = temp;
     }
 };
