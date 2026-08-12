@@ -30,6 +30,22 @@ int main() {
     // Check the size of the list
     cout << "Size of the list: " << ll.size() << endl;
 
+    ll.push_back(20);
+    ll.push_front(20);
+
+    // Displaying List
+    for(auto i = ll.begin(); i != ll.end(); i++)   
+        cout << *i << " ";
+    cout << endl;
+
+    // Remove a particular element 
+    ll.remove(20);
+
+    // Displaying List
+    for(auto i = ll.begin(); i != ll.end(); i++)   
+        cout << *i << " ";
+    cout << endl;
+
     // Clearing the list 
     ll.clear(); 
 
